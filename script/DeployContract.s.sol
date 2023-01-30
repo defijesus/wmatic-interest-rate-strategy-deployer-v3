@@ -14,10 +14,10 @@ contract DeployContract is Script {
         vm.startBroadcast();
         DefaultReserveInterestRateStrategy deployedContract = new DefaultReserveInterestRateStrategy(
             POOL_ADDRESSES_PROVIDER,
-            800000000000000000000000000, // UOptimal
+            750000000000000000000000000, // UOptimal
             30000000000000000000000000, // Base Variable Borrow Rate
-            140000000000000000000000000, // Variable Slope 1
-            1500000000000000000000000000, // Variable Slope 2
+            61000000000000000000000000, // Variable Slope 1
+            1000000000000000000000000000, // Variable Slope 2
             0, // Stable Slope 1
             0, // Stable Slope 2
             20000000000000000000000000, // Base Stable Rate Offset

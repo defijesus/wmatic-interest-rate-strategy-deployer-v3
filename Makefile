@@ -13,7 +13,7 @@ match    :; forge clean && forge test --etherscan-api-key ${ETHERSCAN_API_KEY} -
 report   :; forge clean && forge test --gas-report | sed -e/╭/\{ -e:1 -en\;b1 -e\} -ed | cat > .gas-report
 
 # Deploy and Verify Contract
-deploy-contract :; forge script script/DeployContract.s.sol:DeployContract --rpc-url ${RPC_POLYGON_URL} --broadcast --private-key ${PRIVATE_KEY} --verify --etherscan-api-key ${POLYGONSCAN_API_KEY} -vvvv
+deploy-contract :; forge script script/DeployContract.s.sol:DeployContract --rpc-url ${RPC_POLYGON_URL} --broadcast --chain-id 137 --ledger --sender 0xde30040413b26d7aa2b6fc4761d80eb35dcf97ad --verify --etherscan-api-key ${POLYGONSCAN_API_KEY} -vvvv
 verify-contract :; forge script script/DeployContract.s.sol:DeployContract --rpc-url ${RPC_POLYGON_URL} --verify --etherscan-api-key ${POLYGONSCAN_API_KEY} -vvvv
 
 # Clean & lint
