@@ -15,7 +15,7 @@ contract DeployContract is Script {
         DefaultReserveInterestRateStrategy deployedContract = new DefaultReserveInterestRateStrategy(
             POOL_ADDRESSES_PROVIDER,
             750000000000000000000000000, // UOptimal
-            30000000000000000000000000, // Base Variable Borrow Rate
+            0, // Base Variable Borrow Rate
             61000000000000000000000000, // Variable Slope 1
             1000000000000000000000000000, // Variable Slope 2
             0, // Stable Slope 1
